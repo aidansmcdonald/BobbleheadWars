@@ -1108,7 +1108,9 @@ GameObject:
   - component: {fileID: 4558308299672658}
   - component: {fileID: 981558332359638534}
   - component: {fileID: 1495805959516824915}
-  m_Layer: 0
+  - component: {fileID: 8552110697701385060}
+  - component: {fileID: 768435599994299191}
+  m_Layer: 8
   m_Name: Alien
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1145,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1155,11 +1157,47 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326983052875474}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.0124278
   m_Center: {x: 0.3399999, y: 2.54, z: 0.077572346}
+--- !u!195 &8552110697701385060
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326983052875474}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1.45
+  m_Speed: 20
+  m_Acceleration: 15.5
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 6.2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &768435599994299191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326983052875474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adb34193fd1550469e6cdd4b9ace144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  navigationUpdate: 0.25
 --- !u!1 &1344034646348482
 GameObject:
   m_ObjectHideFlags: 0
