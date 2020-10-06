@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 374}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_MinSize: {x: 909, y: 324}
   m_MaxSize: {x: 22006, y: 10024}
   vertical: 0
-  controlID: 55
+  controlID: 12
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 324}
   m_MaxSize: {x: 4002, y: 8024}
   vertical: 1
-  controlID: 111
+  controlID: 13
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,6 +304,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 1107259654869261162, guid: 8f849f27ef263ac458d6ab05f3930b7e, type: 2}
     - {fileID: 1107826699124864946, guid: 259fa7ff7218b43408ce6d4566c42761, type: 2}
+    - {fileID: 1107023355541600678, guid: 12a3748c733dadb429770b61d57bf0f4, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.78246754
       e01: 0
@@ -337,11 +338,27 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.85064197
+      e01: 0
+      e02: 0
+      e03: -20.501831
+      e10: 0
+      e11: 0.85064197
+      e12: 0
+      e13: 119.62269
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 259fa7ff7218b43408ce6d4566c42761,
+  m_AnimatorController: {fileID: 9100000, guid: 12a3748c733dadb429770b61d57bf0f4,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107826699124864946, guid: 259fa7ff7218b43408ce6d4566c42761,
+  - m_Target: {fileID: 1107023355541600678, guid: 12a3748c733dadb429770b61d57bf0f4,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -410,9 +427,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e300000
-      m_LastClickedID: 12382
-      m_ExpandedIDs: 4c300000503000005230000054300000563000005e3000006a3000006e300000703000007e3000008430000086300000883000008e30000094300000
+      m_SelectedIDs: d02a0000
+      m_LastClickedID: 10960
+      m_ExpandedIDs: d0f9ffffd4fbffffd02a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -509,11 +526,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Animations
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\YEAR_TWO\Semester_One\Game_Engines\Lab1\resources-Chapters1-4\03-components\starter\Bobblehead
     Wars
@@ -521,8 +538,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d8280000
-    m_LastClickedID: 10456
+    m_SelectedIDs: de260000
+    m_LastClickedID: 9950
     m_ExpandedIDs: 000000001a26000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -713,14 +730,14 @@ MonoBehaviour:
     height: 379
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: b1e6d7708ef6c7b4387e38f5a82fa9f2
-  m_SceneLighting: 0
+  m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.68471, y: 16.65547, z: 8.820939}
+    m_Target: {x: -32.463783, y: 3.6590118, z: -11.303154}
     speed: 2
-    m_Value: {x: 2.68471, y: 16.65547, z: 8.820939}
+    m_Value: {x: -32.463783, y: 3.6590118, z: -11.303154}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -748,13 +765,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.12744014, y: -0.018748002, z: 0.0024091208, w: -0.99166614}
+    m_Target: {x: -0.29537523, y: -0.37388653, z: 0.12694286, w: -0.8699701}
     speed: 2
-    m_Value: {x: -0.12744014, y: -0.018748002, z: 0.0024091208, w: -0.99166614}
+    m_Value: {x: -0.29537523, y: -0.37388653, z: 0.12694286, w: -0.8699701}
   m_Size:
-    m_Target: 20.320158
+    m_Target: 218.69151
     speed: 2
-    m_Value: 20.320158
+    m_Value: 218.69151
   m_Ortho:
     m_Target: 0
     speed: 2
