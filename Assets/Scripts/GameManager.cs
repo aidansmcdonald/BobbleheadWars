@@ -28,15 +28,54 @@ public class GameManager : MonoBehaviour
     //Tracks time since last spawn
     private float currentSpawnTime = 0;
 
+    //Upgrade/pickup
+    public GameObject upgradePrefab; 
+    //Ref to gun script
+    public Gun gun;
+    //Max time before upgrade spawns
+    public float upgradeMaxTimeSpawn = 7.5f;
+    //Tracks if pickup spawned, only one can spawn
+    private bool spawnedUpgrade = false;
+    //Tracks the current time until upgrade spawns
+    private float actualUpgradeTime = 0;
+   
+    private float currentUpgradeTime = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Determine upgrade time
+        actualUpgradeTime = Random.Range(upgradeMaxTimeSpawn - 3.0f, upgradeMaxTimeSpawn);
+        actualUpgradeTime = Mathf.Abs(actualUpgradeTime);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Increase current upgrade time each frame
+        currentUpgradeTime += Time.deltaTime;
+
+        if (currentUpgradeTime > actualUpgradeTime)
+        {
+            // After random time passes, check if pickup is spawned
+            if (!spawnedUpgrade)
+            {
+                // Spawn at spawn point
+                int randomNumber = Random.Range(0, spawnPoints.Length - 1);
+                GameObject spawnLocation = spawnPoints[randomNumber];
+                // Associates gun with upgrade
+                GameObject upgrade = Instantiate(upgradePrefab) as GameObject;
+                Upgrade upgradeScript = upgrade.GetComponent<Upgrade>();
+                upgradeScript.gun = gun;
+                upgrade.transform.position = spawnLocation.transform.position;
+                // Upgrade spawn is now true
+                spawnedUpgrade = true;
+
+                //Sound effect for pickup
+                SoundManager.Instance.PlayOneShot(SoundManager.Instance.powerUpAppear);
+            }
+        }
+
         //Accumulates the amount of time that has passed
         currentSpawnTime += Time.deltaTime;
 

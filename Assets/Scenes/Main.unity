@@ -713,6 +713,9 @@ MonoBehaviour:
   minSpawnTime: 0
   maxSpawnTime: 3
   aliensPerSpawn: 3
+  upgradePrefab: {fileID: 105092, guid: 941d6224549424c91b1cf112b44ec0cb, type: 3}
+  gun: {fileID: 1954318827}
+  upgradeMaxTimeSpawn: 7.5
 --- !u!4 &827372664
 Transform:
   m_ObjectHideFlags: 0
