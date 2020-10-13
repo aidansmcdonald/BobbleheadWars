@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.Events;
 public class Alien : MonoBehaviour
 {
     // Alien target location
@@ -13,6 +13,8 @@ public class Alien : MonoBehaviour
     public float navigationUpdate;
     //Tracks time since previous update
     private float navigationTime = 0;
+    //Unity custom event type
+    public UnityEvent OnDestroy;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,17 @@ public class Alien : MonoBehaviour
     //Make collision the trigger to destroy the alien
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        Die();
         SoundManager.Instance.PlayOneShot(SoundManager.Instance.alienDeath);
+    }
+
+    //Destroy the alien when it dies
+    public void Die()
+    {
+        Destroy(gameObject);
+        //Notifies GM of death
+        OnDestroy.Invoke();
+        //Removes the listener
+        OnDestroy.RemoveAllListeners();
     }
 }

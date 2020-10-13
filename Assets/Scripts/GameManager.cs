@@ -146,8 +146,19 @@ public class GameManager : MonoBehaviour
                     Vector3 targetRotation = new Vector3(player.transform.position.x,
                         newAlien.transform.position.y, player.transform.position.z);
                     newAlien.transform.LookAt(targetRotation);
+
+                    //Call addlistener on event, AlienDestroyed is called when event occurs
+                    alienScript.OnDestroy.AddListener(AlienDestroyed);
                 }
             }
         }
+    }
+
+    public void AlienDestroyed()
+    {
+        //Decreases aliens on screen
+        aliensOnScreen -= 1;
+        //Decreases aliens needed to win
+        totalAliens -= 1;
     }
 }
