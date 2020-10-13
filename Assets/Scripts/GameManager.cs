@@ -52,6 +52,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //If there is no player, return
+        if (player == null)
+        {
+            return;
+        }
+
         //Increase current upgrade time each frame
         currentUpgradeTime += Time.deltaTime;
 
