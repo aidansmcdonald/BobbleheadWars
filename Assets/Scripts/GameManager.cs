@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
    
     private float currentUpgradeTime = 0;
 
+    public GameObject DeathFloor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -115,46 +117,49 @@ public class GameManager : MonoBehaviour
                     if (aliensOnScreen < maxAliensOnScreen)
                     {
                         aliensOnScreen += 1;
-                    }
-                   
-                    //Spawn Location (-1 for not set)
-                    int spawnPoint = -1;
-                    //Loop until a spawn point if found
-                    while (spawnPoint == -1)
-                    {
-                        //Produces a random number which is the spawn point
-                        int randomNumber = Random.Range(0, spawnPoints.Length - 1);
-                        
-                        //Checks to see is generated number is being used by another alien,
-                        //if true, rerolls a new spawn point
-                        if (!previousSpawnLocations.Contains(randomNumber))
+
+
+                        //Spawn Location (-1 for not set)
+                        int spawnPoint = -1;
+                        //Loop until a spawn point if found
+                        while (spawnPoint == -1)
                         {
-                            previousSpawnLocations.Add(randomNumber);
-                            spawnPoint = randomNumber;
+                            //Produces a random number which is the spawn point
+                            int randomNumber = Random.Range(0, spawnPoints.Length - 1);
+
+                            //Checks to see is generated number is being used by another alien,
+                            //if true, rerolls a new spawn point
+                            if (!previousSpawnLocations.Contains(randomNumber))
+                            {
+                                previousSpawnLocations.Add(randomNumber);
+                                spawnPoint = randomNumber;
+                            }
                         }
+                        //Takes spawn point from code above
+                        GameObject spawnLocation = spawnPoints[spawnPoint];
+
+                        //Spawns a new alien
+                        GameObject newAlien = Instantiate(alien) as GameObject;
+
+                        //Positions the alien at it's spawn point
+                        newAlien.transform.position = spawnLocation.transform.position;
+
+                        //Gives reference to alien script
+                        Alien alienScript = newAlien.GetComponent<Alien>();
+
+                        //alien target is space marine
+                        alienScript.target = player.transform;
+
+                        //Rotate towards player
+                        Vector3 targetRotation = new Vector3(player.transform.position.x,
+                            newAlien.transform.position.y, player.transform.position.z);
+                        newAlien.transform.LookAt(targetRotation);
+
+                        //Call addlistener on event, AlienDestroyed is called when event occurs
+                        alienScript.OnDestroy.AddListener(AlienDestroyed);
+
+                        alienScript.GetDeathParticles().SetDeathFloor(DeathFloor);
                     }
-                    //Takes spawn point from code above
-                    GameObject spawnLocation = spawnPoints[spawnPoint];
-
-                    //Spawns a new alien
-                    GameObject newAlien = Instantiate(alien) as GameObject;
-
-                    //Positions the alien at it's spawn point
-                    newAlien.transform.position = spawnLocation.transform.position;
-
-                    //Gives reference to alien script
-                    Alien alienScript = newAlien.GetComponent<Alien>();
-
-                    //alien target is space marine
-                    alienScript.target = player.transform;
-
-                    //Rotate towards player
-                    Vector3 targetRotation = new Vector3(player.transform.position.x,
-                        newAlien.transform.position.y, player.transform.position.z);
-                    newAlien.transform.LookAt(targetRotation);
-
-                    //Call addlistener on event, AlienDestroyed is called when event occurs
-                    alienScript.OnDestroy.AddListener(AlienDestroyed);
                 }
             }
         }
