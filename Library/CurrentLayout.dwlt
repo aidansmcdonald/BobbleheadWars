@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 498}
+  m_MinSize: {x: 950, y: 424}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 374}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 101
+  controlID: 153
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,10 +143,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 911, y: 448}
+  m_MinSize: {x: 909, y: 374}
   m_MaxSize: {x: 22006, y: 14024}
   vertical: 0
-  controlID: 141
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,10 +189,10 @@ MonoBehaviour:
     y: 0
     width: 932
     height: 947
-  m_MinSize: {x: 202, y: 448}
-  m_MaxSize: {x: 4002, y: 8048}
+  m_MinSize: {x: 200, y: 324}
+  m_MaxSize: {x: 4002, y: 8024}
   vertical: 1
-  controlID: 142
+  controlID: 13
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,14 +291,14 @@ MonoBehaviour:
     y: 0
     width: 932
     height: 399
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 102, y: 124}
+  m_MaxSize: {x: 4002, y: 4024}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 21}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -425,7 +425,7 @@ MonoBehaviour:
       splitSize: 6
       xOffset: 0
     m_HorizontalSplitter:
-      ID: 106
+      ID: 158
       splitterInitialOffset: 0
       currentActiveSplitter: -1
       realSizes: a00000000a010000
@@ -466,7 +466,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 832
+    width: 930
     height: 379
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
@@ -476,14 +476,14 @@ MonoBehaviour:
     - {fileID: 1107023355541600678, guid: 12a3748c733dadb429770b61d57bf0f4, type: 2}
     - {fileID: 1107958841086546014, guid: abb2071551669c14bbde48307cd1e21c, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.78246754
+    - e00: 0.82419443
       e01: 0
       e02: 0
-      e03: -24.123413
+      e03: -12.769501
       e10: 0
-      e11: 0.78246754
+      e11: 0.82419443
       e12: 0
-      e13: 93.70942
+      e13: 163.19049
       e20: 0
       e21: 0
       e22: 1
@@ -541,10 +541,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: abb2071551669c14bbde48307cd1e21c,
+  m_AnimatorController: {fileID: 9100000, guid: 8f849f27ef263ac458d6ab05f3930b7e,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107958841086546014, guid: abb2071551669c14bbde48307cd1e21c,
+  - m_Target: {fileID: 1107259654869261162, guid: 8f849f27ef263ac458d6ab05f3930b7e,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -613,9 +613,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 7eecffff
       m_LastClickedID: 0
-      m_ExpandedIDs: d4fbffffda2a0000
+      m_ExpandedIDs: d4fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -712,11 +712,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\YEAR_TWO\Semester_One\Game_Engines\Lab1\resources-Chapters1-4\03-components\starter\Bobblehead
     Wars
@@ -724,8 +724,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f4280000
-    m_LastClickedID: 10484
+    m_SelectedIDs: fe260000
+    m_LastClickedID: 9982
     m_ExpandedIDs: 000000003426000060290000c429000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
